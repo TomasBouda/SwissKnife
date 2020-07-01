@@ -18,7 +18,7 @@ ModuleVersion = '1.0.0'
 # CompatiblePSEditions = @()
 
 # ID used to uniquely identify this module
-GUID = '7110d237-2b4c-4a8f-b49f-58b813b4efde'
+GUID = '2552f6c7-6ff3-4335-bad7-91480ad4745b'
 
 # Author of this module
 Author = 'Tomas Bouda'
@@ -75,7 +75,7 @@ FunctionsToExport = 'Add-MemberOrSetValue', 'Get-Enum', 'Get-UrlFilename',
                'Merge-Folder', 'Build-Module', 'Join-String', 'Test-NotNullOrEmpty', 
                'Add-TimeStamp', 'Clear-Line', 'Get-CursorPosition', 'Read-HostColored', 
                'Set-CursorPosition', 'Show-ChooseMenu', 'Show-UpDownMenu', 
-               'Write-HostColored', 'New-Guid', 'Test-IsElevated', 'Use-If', 
+               'Write-HostColored', 'Test-IsElevated', 'Use-If', 
                'Write-ScriptHeader', 'Get-FilesFromGithub', 'Get-GithubArchive', 
                'Get-ParentUrl'
 
@@ -109,7 +109,7 @@ PrivateData = @{
         # LicenseUri = ''
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://tomlabscloud.visualstudio.com/LineupExtra/_git/Lineup.ToolBox'
+        ProjectUri = 'https://github.com/TomasBouda/PowerShell.SwissKnife'
 
         # A URL to an icon representing this module.
         # IconUri = ''
@@ -118,7 +118,7 @@ PrivateData = @{
         ReleaseNotes = 'Init'
 
         # Prerelease string of this module
-        # Prerelease = ''
+        Prerelease = 'preview1'
 
         # Flag to indicate whether the module requires explicit user acceptance for install/update/save
         # RequireLicenseAcceptance = $false
