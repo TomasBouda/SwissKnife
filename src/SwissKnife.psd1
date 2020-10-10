@@ -76,7 +76,7 @@ FunctionsToExport = 'Add-MemberOrSetValue', 'Get-Enum', 'Get-UrlFilename',
                'Add-TimeStamp', 'Clear-Line', 'Get-CursorPosition', 'Read-HostColored', 
                'Set-CursorPosition', 'Show-ChooseMenu', 'Show-UpDownMenu', 
                'Write-HostColored', 'Test-IsElevated', 'Use-If', 
-               'Write-ScriptHeader', 'Get-FilesFromGithub', 'Get-GithubArchive', 
+               'Write-ScriptHeader', 'Get-GithubArchive', 
                'Get-ParentUrl'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -118,7 +118,7 @@ PrivateData = @{
         ReleaseNotes = 'Init'
 
         # Prerelease string of this module
-        Prerelease = 'preview1'
+        Prerelease = 'preview2'
 
         # Flag to indicate whether the module requires explicit user acceptance for install/update/save
         # RequireLicenseAcceptance = $false
