@@ -1,6 +1,7 @@
 function New-ScheduledTaskFolder {
 	[CmdletBinding()]
 	param (
+		[Parameter(Mandatory = $true)]
 		[string]$FolderPath
 	)
 

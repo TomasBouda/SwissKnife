@@ -1,6 +1,6 @@
-function Test-NotNullOrEmpty{
+function Test-NotNullOrEmpty {
 	param(
-		[Parameter(Mandatory=$true, Position=0)]
+		[Parameter(Mandatory = $true, Position = 0)]
 		[AllowEmptyString()]
 		[string]$String
 	)

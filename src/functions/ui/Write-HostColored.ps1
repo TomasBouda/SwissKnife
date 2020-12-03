@@ -9,14 +9,8 @@ function Write-HostColored() {
 		[parameter(Mandatory = $false)]
 		[ConsoleColor]$HighlightColor = [System.ConsoleColor]::Yellow,
 		[parameter(Mandatory = $false)]
-		[switch]$PassThru = $false,
-		[parameter(Mandatory = $false)]
-		[switch]$AddTimestamp = $false
+		[switch]$PassThru = $false
 	)
-
-	if ($AddTimestamp) {
-		Add-TimeStamp
-	}
 
 	$index = 0
 	$results = $Format | Select-String '\{\{.+?\}\}' -AllMatches 

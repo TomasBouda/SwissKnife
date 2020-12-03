@@ -1,4 +1,4 @@
-function Get-SHA256 {
+function ConvertTo-SHA256 {
 	Param (
 		[Parameter(Mandatory = $true)]
 		[string]$String

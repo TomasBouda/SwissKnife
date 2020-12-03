@@ -1,4 +1,4 @@
-function Build-Module {
+function Start-ModuleBuild {
 	param(
 		[Parameter(Mandatory = $true)]
 		[string]$ModuleDirectory,

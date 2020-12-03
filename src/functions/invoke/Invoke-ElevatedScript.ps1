@@ -10,5 +10,10 @@ function Invoke-ElevatedScript {
 		$Script += "`npause"
 	}
 
-	Start-Process 'powershell.exe' $Script -Verb RunAs
+	if($PSVersionTable.PSEdition -eq 'Core'){
+		Start-Process pwsh '-c', $Script -Verb RunAs
+	}
+	else{
+		Start-Process 'powershell.exe' $Script -Verb RunAs
+	}
 }

@@ -1,4 +1,4 @@
-function Add-MemberOrSetValue{
+function Add-MemberOrSetValue {
 	[cmdletbinding()]
 	param(
 		[Parameter(Mandatory = $true, ValueFromPipeline = $true)]
@@ -9,11 +9,11 @@ function Add-MemberOrSetValue{
 		[object]$PropertyValue
 	)
 
-	process{
-		if(-not (Get-Member -InputObject $InputObject -name $PropertyName -Membertype Properties)){
+	process {
+		if (-not (Get-Member -InputObject $InputObject -name $PropertyName -Membertype Properties)) {
 			$InputObject | Add-Member -NotePropertyName $PropertyName -NotePropertyValue $PropertyValue
 		}
-		else{
+		else {
 			$InputObject."$PropertyName" = $PropertyValue
 		}
 	}
