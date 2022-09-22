@@ -1,4 +1,4 @@
-function Get-GithubArchive(){
+function Get-GithubArchive() {
 	[CmdLetBinding()]
 	param(
 		[parameter(Mandatory = $true)]
@@ -9,14 +9,14 @@ function Get-GithubArchive(){
 		[string]$AuthToken
 	)
 
-	begin{
+	begin {
 		$wc = New-Object System.Net.WebClient
-		$wc.Headers.Add('Authorization',"token $AuthToken")
+		$wc.Headers.Add('Authorization', "token $AuthToken")
 	}
-	process{
+	process {
 		$wc.DownloadFile($Url, $OutFilePath)
 	}
-	end{
+	end {
 		$wc.Dispose()
 	}
 }

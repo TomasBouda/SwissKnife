@@ -1,6 +1,6 @@
 # SwissKnife
 
-[![psgallery](https://img.shields.io/powershellgallery/v/swissknife.svg)](https://www.powershellgallery.com/packages/swissknife/) [![psgallery](https://img.shields.io/powershellgallery/dt/swissknife.svg)](https://www.powershellgallery.com/packages/swissknife/) [![Discord](https://img.shields.io/discord/382982965585510402?color=orange&label=discord)](https://discord.gg/FVdVxuw) [![Support](https://img.shields.io/badge/%24-Support-blueviolet)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GRARVRTVNEUHS)
+[![psgallery](https://img.shields.io/powershellgallery/v/swissknife.svg)](https://www.powershellgallery.com/packages/swissknife/) [![psgallery](https://img.shields.io/powershellgallery/dt/swissknife.svg)](https://www.powershellgallery.com/packages/swissknife/) [![Discord](https://img.shields.io/discord/382982965585510402?color=orange&label=discord)](https://discord.gg/zdTsaR4mDh) [![Support](https://img.shields.io/badge/%24-Support-blueviolet)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GRARVRTVNEUHS)
 
 SwissKnife is PowerShell module that collects many usefull cmdlets.
 

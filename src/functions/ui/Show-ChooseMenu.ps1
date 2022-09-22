@@ -10,6 +10,11 @@ function Show-ChooseMenu {
 	)
 
 	begin {
+		if ($host.Name -ne 'ConsoleHost') {
+			Write-Error "Cannot open ChooseMenu in current host($($host.Name))!"
+			return
+		}
+
 		Write-HostColored "$Title (Pres {{arrow keys}} and hit {{Enter}} to choose; {{Escape}} to exit):" -ForegroundColor Yellow -HighlightColor Magenta
 
 		$i = 0
@@ -27,7 +32,7 @@ function Show-ChooseMenu {
 				Write-Host "[ ] $option" -BackgroundColor Black
 			}
 		}
-
+		$host.UI.RawUI.BufferSize
 		$endPos = Get-CursorPosition
 		$currPos.X++
 		$prevPos = $currPos
@@ -37,7 +42,8 @@ function Show-ChooseMenu {
 
 		while ($null -eq $key -or ($key.Key -ne 'Enter' -and $key.Key -ne 'Esc')) {
 
-			$key = [System.Console]::ReadKey()
+			$key = [System.Console]::ReadKey($false)
+			
 			if ($key.Key -eq 'DownArrow') {
 				if ($i -eq $Options.Length - 1) {
 					$i = 0

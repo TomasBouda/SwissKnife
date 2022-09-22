@@ -2,14 +2,23 @@ function Start-ModuleBuild {
 	param(
 		[Parameter(Mandatory = $true)]
 		[string]$ModuleDirectory,
+
 		[Parameter(Mandatory = $true)]
 		[Version]$TargetVersion,
+
+		[Parameter(Mandatory = $false)]
+		[AllowEmptyString()]
+		[AllowNull()]
+		[string]$PreRelease,
+
 		[Parameter(Mandatory = $false)]
 		[string]$ReleaseNotes,
+
 		[Parameter(Mandatory = $false)]
 		[string]$ModuleName = (Get-Item $ModuleDirectory).BaseName,
+
 		[Parameter(Mandatory = $false)]
-		[string]$PublishFolder = "$PSScriptRoot\publish\$ModuleName\"
+		[string]$PublishFolder = "$PSScriptRoot\output\$ModuleName\"
 	)
 
 	$excludedItems = Get-Content "$PSScriptRoot\.buildExclude" -ErrorAction SilentlyContinue
@@ -23,7 +32,7 @@ function Start-ModuleBuild {
 	}
 
 	# Update module version
-	Update-ModuleManifest "$ModuleDirectory\$ModuleName.psd1" -ModuleVersion $TargetVersion -ReleaseNotes $ReleaseNotes -FunctionsToExport $functions
+	Update-ModuleManifest "$ModuleDirectory\$ModuleName.psd1" -ModuleVersion $TargetVersion -ReleaseNotes $ReleaseNotes -FunctionsToExport $functions -Prerelease $PreRelease
 
 	# Create clean publish folder
 	if (Test-Path $PublishFolder) {
